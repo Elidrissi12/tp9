@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import CompteList from './components/CompteList';
+import CompteForm from './components/CompteForm';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="app-header">
+        <div className="container">
+          <h1 className="text-center">
+            <i className="bi bi-bank" style={{marginRight: '15px'}}></i>
+            Gestion des Comptes Bancaires
+          </h1>
+          <p className="text-center text-white-50 mb-0 mt-2">
+            Application de gestion des comptes courants et d'épargne
+          </p>
+        </div>
       </header>
+      <div className="container">
+        <CompteForm />
+        <CompteList />
+      </div>
     </div>
   );
 }
